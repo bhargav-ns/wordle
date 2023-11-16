@@ -62,7 +62,7 @@ public:
 
         if (attempts_ == 0)
         {
-            std::cout << "You ran out of attempts!" << std::endl;
+            std::cout << "You ran out of attempts! The word was: " << wordToGuess << std::endl;
         }
     }
 
