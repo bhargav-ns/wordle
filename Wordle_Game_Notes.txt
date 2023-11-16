@@ -1,0 +1,21 @@
+Wordle description:
+- The user needs to guess the letters in a word in a certain number of tries. 
+- For each turn, the user guesses a word which is as long as the number of blanks presented to the user.
+- If the user gets all the letters right, the game ends and the success 
+gets logged in a file along with the number of tries it took.
+- The words that the user needs to guess is read from a file that contains all possible words
+- If the letter positions match in the guessed word, represent that with a !, if the letter
+is present in the word but the positions don't match, represent that with a #
+
+Edge cases:
+- The user gusses more letters than the number of blanks: Return an error and give them an extra guess
+
+
+Program Structure:
+- Data loader class - loads the words from the file, processes them, selects a list of 10, and stores it
+in an array
+- Guess Checker Class - take a guess, a word, and check if the guess and the word match. Should
+return a string with !, #, and _ that represent the state of the word.
+- User input class - Takes a word input from a user after validating that the input matches the word count
+- Wordle class: Creates instances of all these classes to run the guess checker iteratively until
+the game is won or lost. Writes the result of the game to a file.
